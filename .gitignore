@@ -127,6 +127,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+api_license/env_api_license/
+api_vector_database/env_api_vector_database/
+
 
 # Spyder project settings
 .spyderproject
