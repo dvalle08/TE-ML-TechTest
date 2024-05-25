@@ -1,0 +1,11 @@
+fastapi  
+uvicorn  
+pytesseract  
+opencv-python-headless  
+numpy  
+transformers  
+fuzzywuzzy
+python-Levenshtein  
+torch
+torchvision 
+torchaudio  

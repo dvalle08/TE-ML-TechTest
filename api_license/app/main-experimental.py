@@ -186,7 +186,6 @@ print(cleaned_text)
 
 person_name = person_name_entity_recognition(cleaned_text)
 
-
 # ToDo: Parse bounding Boxes from image:
 # Dibujar las cajas delimitadoras  
 def drawing_bounding_boxes(processed_img, bounding_boxes):
