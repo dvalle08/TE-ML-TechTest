@@ -1,0 +1,26 @@
+version: '3.8'  
+  
+services:  
+  api_license:  
+    build:   
+      context: ./api_license  
+      dockerfile: Dockerfile  
+    container_name: api_license_container  
+    ports:  
+      - "8001:8000"  
+    volumes:  
+      - ./api_license:/app  
+    environment:  
+      - PYTHONUNBUFFERED=1  
+  
+  api_vector_database:  
+    build:   
+      context: ./api_vector_database  
+      dockerfile: Dockerfile  
+    container_name: api_vector_database_container  
+    ports:  
+      - "8002:8001"   
+    volumes:  
+      - ./api_vector_database:/app  
+    env_file:  
+      - .env  # Cargar variables de entorno  

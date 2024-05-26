@@ -19,7 +19,7 @@ RUN python -c "from chromadb.utils import embedding_functions; sentence_transfor
 RUN chmod +x run.sh  
   
 # Expose the port the app runs on  
-EXPOSE 8000  
+EXPOSE 8001  
   
 # Run the run.sh script  
 CMD ["./run.sh"]  
