@@ -1,6 +1,15 @@
 import fitz  # PyMuPDF  
   
 def extract_text_by_paragraph(pdf_path):  
+    """  
+    Extracts text from a PDF document by paragraphs, ignoring footnotes.  
+  
+    Args:  
+        pdf_path (str): The file path to the PDF document.  
+  
+    Returns:  
+        list of dict: A list of dictionaries, each containing the page number, block number, and text of a paragraph.  
+    """  
     document = fitz.open(pdf_path)  
     data = []  
     for page_num in range(len(document)):  

@@ -7,6 +7,16 @@ from contextlib import asynccontextmanager
   
 @asynccontextmanager  
 async def lifespan(app: FastAPI):  
+    """  
+    Manages the lifespan of the FastAPI application, ensuring necessary environment variables and files are set up,  
+    and initializes the database.  
+  
+    Args:  
+        app (FastAPI): The FastAPI application instance.  
+  
+    Yields:  
+        None: This context manager yields control back to the application to continue and accept requests.  
+    """  
     # Verificar que la variable de entorno GOOGLE_API_KEY esté configurada  
     api_key = os.getenv('GOOGLE_API_KEY')  
     if not api_key:  

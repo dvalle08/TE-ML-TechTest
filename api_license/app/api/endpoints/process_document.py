@@ -10,6 +10,17 @@ router = APIRouter()
   
 @router.post("/")  
 async def process_document(file: UploadFile = File(...), name: str = Form(...)):  
+    """  
+    Processes an uploaded image document, extracts text, and recognizes person names.  
+  
+    Args:  
+        file (UploadFile): The image file uploaded by the user.  
+        name (str): The name provided by the user for comparison.  
+  
+    Returns:  
+        dict: A dictionary with the processing results, including the extracted name,  
+              bounding box of the name, fuzzy similarity score, and the similar name found.  
+    """  
     contents = await file.read()  
     nparr = np.frombuffer(contents, np.uint8)  
     image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)  
