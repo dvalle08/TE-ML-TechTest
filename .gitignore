@@ -134,6 +134,9 @@ api_vector_database/env_api_vector_database/
 api_license/app/main-experimental.py
 api_license/app/main-provisional.py
 
+api_vector_database/app/main-experimental.py
+api_vector_database/app/main-provisional.py
+
 # Spyder project settings
 .spyderproject
 .spyproject
