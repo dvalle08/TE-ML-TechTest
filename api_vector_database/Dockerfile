@@ -14,7 +14,7 @@ COPY . .
   
 # Descargar el modelo de HuggingFace durante la construcción del contenedor  
 RUN python -c "from chromadb.utils import embedding_functions; sentence_transformer = embedding_functions.SentenceTransformerEmbeddingFunction(model_name='all-MiniLM-L6-v2')"  
-
+## COMMENT AV: Remember, you can use a handler class to tackle this issue and optimice the docker image size in the repo.
 # Ensure the run.sh script is executable  
 RUN chmod +x run.sh  
   

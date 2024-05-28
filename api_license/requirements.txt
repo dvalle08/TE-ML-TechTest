@@ -9,3 +9,7 @@ python-Levenshtein
 torch
 torchvision 
 torchaudio  
+
+## Remember to specify the version of the libraries in the requirements.txt file
+## e,g, fastapi==0.68.0
+## If you don't specify the version, the latest version will be installed and it may not be compatible with the code
