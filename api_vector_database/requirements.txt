@@ -7,3 +7,4 @@ chromadb
 google-generativeai  
 uvicorn  
   
+## COMMENT AV: Remember the version of the libraries you used.
